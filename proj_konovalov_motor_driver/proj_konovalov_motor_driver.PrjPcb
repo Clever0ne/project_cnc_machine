@@ -31,7 +31,7 @@ FSMEncodingStyle=eFMSDropDownList_OneHot
 OutputPath=
 LogFolderPath=
 ManagedProjectGUID=
-Template=D:\AltiumPreferences\templates\1,5mm_18um_4layers_std\1,5mm_18um_4layers_std.PrjPCB
+Template=D:\AltiumPreferences\templates\1,5mm_35um_2layers_std\1,5mm_35um_2layers_std.PrjPCB
 IncludeDesignInRelease=0
 
 [Preferences]
@@ -45,7 +45,7 @@ AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=2
+AnnotateOrder=1
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=0
@@ -73,7 +73,7 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [Document3]
-DocumentPath=proj_pankov_control_board.PcbDoc
+DocumentPath=proj_konovalov_motor_driver.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -90,30 +90,13 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [Document4]
-DocumentPath=proj_pankov_control_board_1.SchDoc
+DocumentPath=proj_konovalov_motor_driver.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=3
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=MMQANTAG
-
-[Document5]
-DocumentPath=proj_pankov_control_board_2.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=4
+AnnotateOrder=0
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -123,78 +106,61 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=MGHWWDNT
 
-[Document6]
-DocumentPath=proj_pankov_control_board_3.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=5
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=EAPYKZAY
-
 [Parameter1]
-Name=approver
-Value=Капустин Д.А.
+Name=title_line_2
+Value=шагового двигателя
 
 [Parameter2]
-Name=check
-Value=Капустин Д.А.
+Name=title_line_1
+Value=Контроллер
 
 [Parameter3]
-Name=designation
-Value=СПБПУ.3331506.019
+Name=title
+Value=Контроллер шагового двигателя
 
 [Parameter4]
-Name=developer
-Value=Паньков И.С.
+Name=sheets_total
+Value=1
 
 [Parameter5]
-Name=document_code
-Value=Э3
+Name=project
+Value=Контроллер шагового двигателя
 
 [Parameter6]
-Name=document_type
-Value=Схема электрическая принципиальная
+Name=pcb_dec_number
+Value=СПБПУ.3331506.012
 
 [Parameter7]
-Name=letter
-Value=
-
-[Parameter8]
 Name=ncontr
 Value=
 
+[Parameter8]
+Name=letter
+Value=
+
 [Parameter9]
-Name=pcb_dec_number
-Value=СПБПУ.3331506.019
+Name=document_type
+Value=Схема электрическая принципиальная
 
 [Parameter10]
-Name=project
-Value=Плата управления станка с ЧПУ
+Name=document_code
+Value=Э3
 
 [Parameter11]
-Name=sheets_total
-Value=3
+Name=developer
+Value=Коновалов В.А.
 
 [Parameter12]
-Name=title
-Value=Плата управления станка с ЧПУ
+Name=designation
+Value=СПБПУ.3331506.012
 
 [Parameter13]
-Name=title_line_1
-Value=Плата управления
+Name=check
+Value=Капустин Д.А.
 
 [Parameter14]
-Name=title_line_2
-Value=станка с ЧПУ
+Name=approver
+Value=Капустин Д.А.
 
 [Configuration1]
 Name=Sources
