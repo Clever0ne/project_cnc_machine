@@ -31,7 +31,7 @@ FSMEncodingStyle=eFMSDropDownList_OneHot
 OutputPath=
 LogFolderPath=
 ManagedProjectGUID=
-Template=D:\AltiumPreferences\templates\1,5mm_18um_4layers_std\1,5mm_18um_4layers_std.PrjPCB
+Template=D:\AltiumPreferences\templates\1,5mm_35um_2layers_std\1,5mm_35um_2layers_std.PrjPCB
 IncludeDesignInRelease=0
 
 [Preferences]
@@ -39,21 +39,21 @@ PrefsVaultGUID=
 PrefsRevisionGUID=
 
 [Document1]
-DocumentPath=project_pankov_control_board.PcbDoc
+DocumentPath=template_n_revision_sheet.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=-1
+AnnotateOrder=1
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
+ClassGenCCAutoEnabled=0
 ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=DSDLQMMG
+DocumentUniqueId=GPGUPSMV
 
 [Document2]
 DocumentPath=OUTPUT.OutJob
@@ -73,7 +73,7 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [Document3]
-DocumentPath=project_pankov_power_supply.SchDoc
+DocumentPath=project_konovalov_motor_driver.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -87,44 +87,10 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=MMQANTAG
+DocumentUniqueId=
 
 [Document4]
-DocumentPath=project_pankov_mcu.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=MGHWWDNT
-
-[Document5]
-DocumentPath=project_pankov_connectors.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=EAPYKZAY
-
-[Document6]
-DocumentPath=template_n_revision_sheet.SchDoc
+DocumentPath=project_konovalov_motor_driver.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -133,20 +99,12 @@ AnnotateScope=All
 AnnotateOrder=2
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=0
+ClassGenCCAutoEnabled=1
 ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=GPGUPSMV
-
-[GeneratedDocument1]
-DocumentPath=Project Outputs for proj_pankov_control_board\Design Rule Check - 1,5mm_18um_2layers_std.html
-DItemRevisionGUID=
-
-[GeneratedDocument2]
-DocumentPath=Project Outputs for proj_pankov_control_board\Design Rule Check - proj_pankov_control_board.html
-DItemRevisionGUID=
+DocumentUniqueId=UUJNKDFI
 
 [Parameter1]
 Name=approver
@@ -158,11 +116,11 @@ Value=Капустин Д.А.
 
 [Parameter3]
 Name=designation
-Value=СПБПУ.3331506.019
+Value=СПБПУ.3331506.012
 
 [Parameter4]
 Name=developer
-Value=Паньков И.С.
+Value=Коновалов В.А.
 
 [Parameter5]
 Name=document_code
@@ -182,27 +140,27 @@ Value=
 
 [Parameter9]
 Name=pcb_dec_number
-Value=СПБПУ.3331506.019
+Value=СПБПУ.3331506.012
 
 [Parameter10]
 Name=project
-Value=Плата управления станка с ЧПУ
+Value=Контроллер шагового двигателя
 
 [Parameter11]
 Name=sheets_total
-Value=3
+Value=1
 
 [Parameter12]
 Name=title
-Value=Плата управления станка с ЧПУ
+Value=Контроллер шагового двигателя
 
 [Parameter13]
 Name=title_line_1
-Value=Плата управления
+Value=Контроллер
 
 [Parameter14]
 Name=title_line_2
-Value=станка с ЧПУ
+Value=шагового двигателя
 
 [Configuration1]
 Name=Sources
