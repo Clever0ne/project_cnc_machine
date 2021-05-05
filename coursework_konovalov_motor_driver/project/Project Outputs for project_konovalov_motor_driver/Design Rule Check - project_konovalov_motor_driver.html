@@ -1,0 +1,376 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://D:\Altium\AD19\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">03.05.2021</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">19:14:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:03</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///D:\Projects\Altium Designer\coursework_cnc_machine\coursework_konovalov_motor_driver\project\project_konovalov_motor_driver.PcbDoc" class="file"><acronym title="D:\Projects\Altium Designer\coursework_cnc_machine\coursework_konovalov_motor_driver\project\project_konovalov_motor_driver.PcbDoc">D:\Projects\Altium Designer\coursework_cnc_machine\coursework_konovalov_motor_driver\project\project_konovalov_motor_driver.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">8</td></tr>
+</table>
+</td>
+</table><a name="IDCWURG2UXDCATET3GZITNZMZJCFDNEJSHWMFWQRXZEBKSRW3FZJ"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID2JPFGOIIYFTWGYZFV2CGTOFZXNAIJAEJDL3LMDL4JDWENT0QJ5AP">Clearance Constraint (Gap=0.2mm) (NOT (OnTopLayer Or OnBottomLayer)),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZM50LA3GYDF2H30AIX4OINQT5HEX2DSCL5URSSGUKGG14C1TXELE">Clearance Constraint (Gap=0.2mm) (OnTopLayer OR OnBottomLayer),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGNSZHOJLVWNTNB3LYFFC2HN15L2Q0YPU11JBTXMTXPL2AVDGJZH">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0SMML5LG11ZYB54T2LK3AFGWACTSAAT1QIURPPN5452ANI2GEYYD">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">8</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDKSW3SZCHX3RHHRBEULA54RLTYNAVK2P4BKXTKHPPEBT5VEYWHINM">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQY0QFUMOSDOCBJHES0KISNOCEDHWM0IPUYGTWTJBXKSOE2V0SB0H">Width Constraint (Min=0.2mm) (Max=10mm) (Preferred=0.2mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDKJCT33OLCBCDPBEJI4YFS2E4FFSXKHYVPAXF23CUBTE0RSPE35EN">Power Plane Connect Rule(Relief Connect )(Expansion=0.5mm) (Conductor Width=0.2mm) (Air Gap=0.2mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDOPHWTL0CBLIJLB22L3FPMBHNEBHHFVULHQIMBBG1CNMPEKABXWQE">Minimum Annular Ring (Minimum=0.2mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDS55BSJK4XKTPKMBMN0EM2ADGZNC5VCUNZZRMQ4M4F32ENJXNZQAF">Minimum Annular Ring (Minimum=0.15mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID4QQSFHWDXKSLI5ZCNHG5GJZZFGVEIYSRRMOP32B5IH1201UGLT0C">Acute Angle Constraint (Minimum=35.000) (OnCopper)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDT5VJL0IQ5FNUMVI02AYYY24XGLMYFIZN1XVZGPJCR5GLKOLHOALF">Hole Size Constraint (Min=0.6mm) (Max=5.9mm) (IsPad)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDKDWO4EWJBUHSQJ5DUPTYGR3ZB35LUCD23XSI1CZW0DCWKGCRFXH">Hole Size Constraint (Min=0.3mm) (Max=5.9mm) (IsVia)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOA31TKX1HXTWGFVZSQTNXH2ECBLJO1DO3CJ3LUJOXT4GV1WFB2TP">Hole To Hole Clearance (Gap=0.2mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDVYO2B52JNY50KXRHP3MCLE5AYOAWH5MVSL0S1RLKJCO3J4UGFU3G">Minimum Solder Mask Sliver (Gap=0.15mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID0RCSLG5YGFMOMY4PN5JBMUGWXMSKYLD15VXHYJDUYFW2DDUC505F">Silk To Solder Mask (Clearance=0.15mm) (Disabled)(IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID01AKXWIV4M11D1VR30HSLZTZ5H3VTWTMJPWAQEOHPNUR51XGOHOO">Silk to Silk (Clearance=0.15mm) (Disabled)(All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID2J1NQSEEFSRWKDI0TOH0QEKA3PG5ZNIVLU40ZEEUHKHZUUDZPR0L">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBDFH40A5VS52BFI20KVAOTOBPM2NZBSSAJCYSLFUC0V0TPN4DOGB">Board Clearance Constraint (Gap=0mm) (NOT (OnLayer('Bottom Overlay') OR OnLayer('Top Overlay')))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOFGW1IUQ0Z5UIA1QGYWIW242ESHSYOVG3NBXXNFSJFEMINTPLCI">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">8</td>
+</tr>
+</table><br><a name="ID0SMML5LG11ZYB54T2LK3AFGWACTSAAT1QIURPPN5452ANI2GEYYD"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Projects\Altium Designer\coursework_cnc_machine\coursework_konovalov_motor_driver\project\project_konovalov_motor_driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=657.48mil|Location2.X=736.22mil|Location1.Y=464.561mil|Location2.Y=535.433mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Projects\Altium Designer\coursework_cnc_machine\coursework_konovalov_motor_driver\project\project_konovalov_motor_driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=657.48mil|Location2.X=736.22mil|Location1.Y=464.561mil|Location2.Y=535.433mil|Absolute=True">Un-Routed Net Constraint: Net +3,3V Between Via (17mm,13.3mm) from Top Layer to Bottom Layer And Pad R5-2(18.25mm,12.3mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Projects\Altium Designer\coursework_cnc_machine\coursework_konovalov_motor_driver\project\project_konovalov_motor_driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=566.929mil|Location2.X=628.937mil|Location1.Y=1832.677mil|Location2.Y=1893.701mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Projects\Altium Designer\coursework_cnc_machine\coursework_konovalov_motor_driver\project\project_konovalov_motor_driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=566.929mil|Location2.X=628.937mil|Location1.Y=1832.677mil|Location2.Y=1893.701mil|Absolute=True">Un-Routed Net Constraint: Net +24V Between Via (14.7mm,47.8mm) from Top Layer to Bottom Layer And Pad VT5-D(15.775mm,46.825mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Projects\Altium Designer\coursework_cnc_machine\coursework_konovalov_motor_driver\project\project_konovalov_motor_driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=427.165mil|Location2.X=468.504mil|Location1.Y=1860.236mil|Location2.Y=1931.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Projects\Altium Designer\coursework_cnc_machine\coursework_konovalov_motor_driver\project\project_konovalov_motor_driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=427.165mil|Location2.X=468.504mil|Location1.Y=1860.236mil|Location2.Y=1931.102mil|Absolute=True">Un-Routed Net Constraint: Net +24V Between Pad VT7-D(11.05mm,48.775mm) on Top Layer And Pad VT7-D(11.375mm,47.8mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Projects\Altium Designer\coursework_cnc_machine\coursework_konovalov_motor_driver\project\project_konovalov_motor_driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=427.165mil|Location2.X=468.504mil|Location1.Y=1909.449mil|Location2.Y=1931.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Projects\Altium Designer\coursework_cnc_machine\coursework_konovalov_motor_driver\project\project_konovalov_motor_driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=427.165mil|Location2.X=468.504mil|Location1.Y=1909.449mil|Location2.Y=1931.102mil|Absolute=True">Un-Routed Net Constraint: Net +24V Between Pad VT7-D(11.05mm,48.775mm) on Top Layer And Pad VT7-D(11.7mm,48.775mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Projects\Altium Designer\coursework_cnc_machine\coursework_konovalov_motor_driver\project\project_konovalov_motor_driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=417.323mil|Location2.X=442.913mil|Location1.Y=1909.449mil|Location2.Y=1964.567mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Projects\Altium Designer\coursework_cnc_machine\coursework_konovalov_motor_driver\project\project_konovalov_motor_driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=417.323mil|Location2.X=442.913mil|Location1.Y=1909.449mil|Location2.Y=1964.567mil|Absolute=True">Un-Routed Net Constraint: Net +24V Between Via (10.9mm,49.6mm) from Top Layer to Bottom Layer And Pad VT7-D(11.05mm,48.775mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Projects\Altium Designer\coursework_cnc_machine\coursework_konovalov_motor_driver\project\project_konovalov_motor_driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=734.252mil|Location2.X=775.591mil|Location1.Y=1860.236mil|Location2.Y=1931.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Projects\Altium Designer\coursework_cnc_machine\coursework_konovalov_motor_driver\project\project_konovalov_motor_driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=734.252mil|Location2.X=775.591mil|Location1.Y=1860.236mil|Location2.Y=1931.102mil|Absolute=True">Un-Routed Net Constraint: Net +24V Between Pad VT9-D(18.85mm,48.775mm) on Top Layer And Pad VT9-D(19.175mm,47.8mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Projects\Altium Designer\coursework_cnc_machine\coursework_konovalov_motor_driver\project\project_konovalov_motor_driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=734.252mil|Location2.X=775.591mil|Location1.Y=1909.449mil|Location2.Y=1931.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Projects\Altium Designer\coursework_cnc_machine\coursework_konovalov_motor_driver\project\project_konovalov_motor_driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=734.252mil|Location2.X=775.591mil|Location1.Y=1909.449mil|Location2.Y=1931.102mil|Absolute=True">Un-Routed Net Constraint: Net +24V Between Pad VT9-D(18.85mm,48.775mm) on Top Layer And Pad VT9-D(19.5mm,48.775mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Projects\Altium Designer\coursework_cnc_machine\coursework_konovalov_motor_driver\project\project_konovalov_motor_driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=728.346mil|Location2.X=751.968mil|Location1.Y=1909.449mil|Location2.Y=1964.567mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Projects\Altium Designer\coursework_cnc_machine\coursework_konovalov_motor_driver\project\project_konovalov_motor_driver.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=728.346mil|Location2.X=751.968mil|Location1.Y=1909.449mil|Location2.Y=1964.567mil|Absolute=True">Un-Routed Net Constraint: Net +24V Between Via (18.8mm,49.6mm) from Top Layer to Bottom Layer And Pad VT9-D(18.85mm,48.775mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

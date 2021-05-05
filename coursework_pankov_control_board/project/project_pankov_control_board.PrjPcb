@@ -73,23 +73,6 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [Document3]
-DocumentPath=template_n_revision_sheet.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=2
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=0
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=GPGUPSMV
-
-[Document4]
 DocumentPath=project_pankov_1_power_supply.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -99,14 +82,14 @@ AnnotateScope=All
 AnnotateOrder=3
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
+ClassGenCCAutoEnabled=0
+ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=MMQANTAG
 
-[Document5]
+[Document4]
 DocumentPath=project_pankov_2_mcu.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -116,14 +99,14 @@ AnnotateScope=All
 AnnotateOrder=4
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
+ClassGenCCAutoEnabled=0
+ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=MGHWWDNT
 
-[Document6]
+[Document5]
 DocumentPath=project_pankov_3_connectors.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -133,19 +116,15 @@ AnnotateScope=All
 AnnotateOrder=5
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
+ClassGenCCAutoEnabled=0
+ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=EAPYKZAY
 
 [GeneratedDocument1]
-DocumentPath=Project Outputs for proj_pankov_control_board\Design Rule Check - 1,5mm_18um_2layers_std.html
-DItemRevisionGUID=
-
-[GeneratedDocument2]
-DocumentPath=Project Outputs for proj_pankov_control_board\Design Rule Check - proj_pankov_control_board.html
+DocumentPath=Project Outputs for project_pankov_control_board\Design Rule Check - project_pankov_control_board.html
 DItemRevisionGUID=
 
 [Parameter1]

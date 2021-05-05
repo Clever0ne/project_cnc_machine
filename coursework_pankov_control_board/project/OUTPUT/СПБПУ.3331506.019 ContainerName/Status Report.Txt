@@ -1,0 +1,19 @@
+Output: Gerber
+Type  : Gerber
+From  : Variant [[No Variations]] of PCB Document [project_pankov_control_board.PcbDoc]
+   Generated File[СПБПУ.3331506.019[Плата управления станка с ЧПУ]_2021-05-05(03-53).GTO]
+   Generated File[СПБПУ.3331506.019[Плата управления станка с ЧПУ]_2021-05-05(03-53).GTS]
+   Generated File[СПБПУ.3331506.019[Плата управления станка с ЧПУ]_2021-05-05(03-53).GTL]
+   Generated File[СПБПУ.3331506.019[Плата управления станка с ЧПУ]_2021-05-05(03-53).GBL]
+   Generated File[СПБПУ.3331506.019[Плата управления станка с ЧПУ]_2021-05-05(03-53).GBS]
+   Generated File[СПБПУ.3331506.019[Плата управления станка с ЧПУ]_2021-05-05(03-53).GBO]
+   Generated File[СПБПУ.3331506.019[Плата управления станка с ЧПУ]_2021-05-05(03-53).GM1]
+   Generated File[СПБПУ.3331506.019[Плата управления станка с ЧПУ]_2021-05-05(03-53).RUL]
+   Generated File[СПБПУ.3331506.019[Плата управления станка с ЧПУ]_2021-05-05(03-53).EXTREP]
+   Generated File[СПБПУ.3331506.019[Плата управления станка с ЧПУ]_2021-05-05(03-53).REP]
+
+
+Files Generated   : 10
+Documents Printed : 0
+
+Finished Output Generation At 3:53:43 On 05.05.2021
