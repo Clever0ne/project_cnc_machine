@@ -128,60 +128,60 @@ DocumentPath=Project Outputs for project_pankov_control_board\Design Rule Check 
 DItemRevisionGUID=
 
 [Parameter1]
-Name=approver
-Value=Капустин Д.А.
+Name=title_line_2
+Value=шаговыми двигателями
 
 [Parameter2]
-Name=check
-Value=Капустин Д.А.
-
-[Parameter3]
-Name=designation
-Value=СПБПУ.3331506.019
-
-[Parameter4]
-Name=developer
-Value=Паньков И.С.
-
-[Parameter5]
-Name=document_code
-Value=Э3
-
-[Parameter6]
-Name=document_type
-Value=Схема электрическая принципиальная
-
-[Parameter7]
-Name=letter
-Value=
-
-[Parameter8]
-Name=ncontr
-Value=
-
-[Parameter9]
-Name=pcb_dec_number
-Value=СПБПУ.3331506.019
-
-[Parameter10]
-Name=project
-Value=Плата управления станка с ЧПУ
-
-[Parameter11]
-Name=sheets_total
-Value=3
-
-[Parameter12]
-Name=title
-Value=Плата управления станка с ЧПУ
-
-[Parameter13]
 Name=title_line_1
 Value=Плата управления
 
+[Parameter3]
+Name=title
+Value=Плата управления шаговыми двигателемя
+
+[Parameter4]
+Name=sheets_total
+Value=3
+
+[Parameter5]
+Name=project
+Value=Плата управления шаговыми двигателями
+
+[Parameter6]
+Name=pcb_dec_number
+Value=СПБПУ.3331506.019
+
+[Parameter7]
+Name=ncontr
+Value=
+
+[Parameter8]
+Name=letter
+Value=
+
+[Parameter9]
+Name=document_type
+Value=Схема электрическая принципиальная
+
+[Parameter10]
+Name=document_code
+Value=Э3
+
+[Parameter11]
+Name=developer
+Value=Паньков И.С.
+
+[Parameter12]
+Name=designation
+Value=СПБПУ.3331506.019
+
+[Parameter13]
+Name=check
+Value=Капустин Д.А.
+
 [Parameter14]
-Name=title_line_2
-Value=станка с ЧПУ
+Name=approver
+Value=Капустин Д.А.
 
 [Configuration1]
 Name=Sources
